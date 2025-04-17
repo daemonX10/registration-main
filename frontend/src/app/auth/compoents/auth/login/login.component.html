@@ -1,37 +1,60 @@
-<section class="container">
-  <h1 class="large text-primary">Sign In</h1>
-  <p class="lead"><i class="fas fa-user"></i> Sign into Your Account</p>
-  @if (loginError) {
-  <div class="alert alert-danger">{{ loginError }}</div>
-  }
-  <form class="form" [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
-    <div class="form-group">
-      <input type="email" placeholder="Email Address" formControlName="email" />
-      @if (loginForm.get('email')?.invalid && loginForm.get('email')?.touched) {
-      <div class="alert alert-danger">Please enter a valid email address</div>
-      }
+<div class="auth-container">
+  <div class="auth-card">
+    <div class="auth-header">
+      <h1>Welcome Back</h1>
+      <p class="subtitle">Sign in to continue to your account</p>
     </div>
-    <div class="form-group">
-      <input
-        type="password"
-        placeholder="Password"
-        formControlName="password"
-      />
-      @if (loginForm.get('password')?.invalid &&
-      loginForm.get('password')?.touched) {
-      <div class="alert alert-danger">
-        Password must be at least 6 characters
+
+    @if (loginError) {
+    <div class="alert alert-danger">{{ loginError }}</div>
+    }
+
+    <form class="auth-form" [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <div class="input-group">
+          <i class="fas fa-envelope"></i>
+          <input 
+            id="email"
+            type="email" 
+            placeholder="Enter your email" 
+            formControlName="email"
+            [class.invalid]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched"
+          />
+        </div>
+        @if (loginForm.get('email')?.invalid && loginForm.get('email')?.touched) {
+        <div class="error-message">Please enter a valid email address</div>
+        }
       </div>
-      }
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <div class="input-group">
+          <i class="fas fa-lock"></i>
+          <input 
+            id="password"
+            type="password" 
+            placeholder="Enter your password" 
+            formControlName="password"
+            [class.invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched"
+          />
+        </div>
+        @if (loginForm.get('password')?.invalid && loginForm.get('password')?.touched) {
+        <div class="error-message">Password must be at least 6 characters</div>
+        }
+      </div>
+
+      <button 
+        type="submit" 
+        class="submit-btn"
+        [disabled]="!loginForm.valid"
+      >
+        Sign In
+      </button>
+    </form>
+
+    <div class="auth-footer">
+      <p>Don't have an account? <a routerLink="/auth/register">Sign Up</a></p>
     </div>
-    <input
-      type="submit"
-      class="btn btn-primary"
-      value="Login"
-      [disabled]="!loginForm.valid"
-    />
-  </form>
-  <p class="my-1">
-    Don't have an account? <a routerLink="/auth/register">Sign Up</a>
-  </p>
-</section>
+  </div>
+</div>
