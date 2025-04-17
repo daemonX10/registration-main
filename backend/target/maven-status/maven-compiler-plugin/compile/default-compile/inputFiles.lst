@@ -1,0 +1,14 @@
+C:\Users\user\Documents\TNP\backend\src\main\java\com\example\demo\service\CustomUserDetailsService.java
+C:\Users\user\Documents\TNP\backend\src\main\java\com\example\demo\config\CorsConfig.java
+C:\Users\user\Documents\TNP\backend\src\main\java\com\example\demo\dto\LoginRequest.java
+C:\Users\user\Documents\TNP\backend\src\main\java\com\example\demo\service\AuthenticationService.java
+C:\Users\user\Documents\TNP\backend\src\main\java\com\example\demo\config\WebMvcConfig.java
+C:\Users\user\Documents\TNP\backend\src\main\java\com\example\demo\dto\RegisterRequest.java
+C:\Users\user\Documents\TNP\backend\src\main\java\com\example\demo\service\JwtService.java
+C:\Users\user\Documents\TNP\backend\src\main\java\com\example\demo\model\User.java
+C:\Users\user\Documents\TNP\backend\src\main\java\com\example\demo\repository\UserRepository.java
+C:\Users\user\Documents\TNP\backend\src\main\java\com\example\demo\config\OpenApiConfig.java
+C:\Users\user\Documents\TNP\backend\src\main\java\com\example\demo\config\SecurityConfig.java
+C:\Users\user\Documents\TNP\backend\src\main\java\com\example\demo\controller\AuthenticationController.java
+C:\Users\user\Documents\TNP\backend\src\main\java\com\example\demo\dto\AuthResponse.java
+C:\Users\user\Documents\TNP\backend\src\main\java\com\example\demo\DemoApplication.java
